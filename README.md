@@ -1,4 +1,4 @@
-## Cats app
+# Cats Galore
 
 ### Basic functionalities
 * Display an index of cats

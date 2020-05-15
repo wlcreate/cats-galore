@@ -6,50 +6,40 @@ class CatTile extends Component {
     likes: 0
   }
 
-  toggleTile = () => {
-    this.setState({
-      showTile: !this.state.showTile
+  toggleTile = (event) => {
+    this.setState((prevState) => {
+      return {
+        showTile: !prevState.showTile
+      }
     })
   }
 
   handleLikes = (event) => {
-    console.log(event.target.innerText)
+    let newLikes = this.props.cat.likes + 1
+    console.log(newLikes)
     this.setState({
-      likes: this.state.likes + 1
+        likes: newLikes
     })
   }
 
   render() {
     let { name, age, sex, picture, likes } = this.props.cat
-    let catInfo = () => {
+
       return(
         <div className="cat-tile">
           <img alt={ `${name} cat` } src={ picture }/>
           <h3>{ name }</h3>
-          <p>Age: { age }</p>
-          <p>Sex: { sex }</p>
-          <p>Likes: { likes }</p>
-        </div>
-      )
-    }
-    
-    return (
-      <>
-        <button onClick={ this.toggleTile }>Show {name}</button>
+          <button onClick={ this.toggleTile }>About {name}</button>
 
-        { this.state.showTile
-          ?
-          <div className="cat-tile">
-          <img alt={ `${name} cat` } src={ picture }/>
-          <h3>{ name }</h3>
-          <p>Age: { age }</p>
-          <p>Sex: { sex }</p>
-          <p>Likes: { likes }</p>
-          <button onClick={ this.handleLikes }>Likes: { likes }</button>
-          </div>
-
+          { this.state.showTile ?
+          <>
+            <p>Age: { age }</p>
+            <p>Sex: { sex }</p>
+            <p>Likes: { likes }</p>
+            <button onClick={ this.handleLikes }>Like</button>
+          </>
           : null }
-      </>
+        </div>    
     )
   }
 }

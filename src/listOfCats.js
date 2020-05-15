@@ -5,7 +5,7 @@ const listOfCats = [
         age: 5,
         sex: "Male",
         picture: "https://pbs.twimg.com/media/EXc1EEqWkAYOCAV?format=jpg&name=medium",
-        likes: 0
+        likes: 1
     },
   
     {
@@ -14,7 +14,7 @@ const listOfCats = [
         age: 8,
         sex: "Female",
         picture: "https://pbs.twimg.com/media/EXsx72eWoAUFGv6?format=jpg&name=large",
-        likes: 0
+        likes: 4
     }
   ]
   

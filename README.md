@@ -1,4 +1,6 @@
 ## Cats app
+
+### Basic functionalities
 * Display an index of cats
 * Each cat object should display a picture, name, age, and sex
 
@@ -8,3 +10,9 @@
 ### CRUD stretch goals
 * Allow user to comment on each cat
 * Allow user to create new cat instances
+
+### Component tree
+App --> CatsContainer --> CatTile --> CatImage
+                                  --> CatBasicInfo
+                                  --> Comments
+                                  --> Likes

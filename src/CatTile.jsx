@@ -5,16 +5,40 @@ class CatTile extends Component {
     showTile: false
   }
 
-  render() {
-    let { name, age, sex, picture } = this.props.cat 
+  toggleTile = (event) => {
+    console.log(event.target)
+    this.setState({
+      showTile: !this.state.showTile
+    })
+  }
 
+  render() {
+    let { name, age, sex, picture } = this.props.cat
+    let catInfo = () => {
+      return(
+        <div className="cat-tile">
+          <img alt={ `${name} cat` } src={ picture }/>
+          <h3>{ name }</h3>
+          <p>Age: { age }</p>
+          <p>Sex: { sex }</p>
+        </div>
+      )
+    }
+    
     return (
-      <div className="cat-tile">
-        <img src={ picture }/>
-        <h3>{ name }</h3>
-        <p>Age: { age }</p>
-        <p>Sex: { sex }</p>
-      </div>
+      <>
+        <button onClick={ this.toggleTile }>{ `Toggle ${name}` }</button>
+        { this.state.showTile
+          ?
+          <div className="cat-tile">
+          <img alt={ `${name} cat` } src={ picture }/>
+          <h3>{ name }</h3>
+          <p>Age: { age }</p>
+          <p>Sex: { sex }</p>
+          </div>
+
+          : null }
+      </>
     )
   }
 }

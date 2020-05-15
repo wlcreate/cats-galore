@@ -12,7 +12,5 @@
 * Allow user to create new cat instances
 
 ### Component tree
-App --> CatsContainer --> CatTile --> CatImage
-                                  --> CatBasicInfo
-                                  --> Comments
+App --> CatsContainer --> CatTile --> Comments
                                   --> Likes

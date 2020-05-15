@@ -4,7 +4,8 @@ const listOfCats = [
         name: "Finkie",
         age: 5,
         sex: "Male",
-        picture: "https://pbs.twimg.com/media/EXc1EEqWkAYOCAV?format=jpg&name=medium"
+        picture: "https://pbs.twimg.com/media/EXc1EEqWkAYOCAV?format=jpg&name=medium",
+        likes: 0
     },
   
     {
@@ -12,7 +13,8 @@ const listOfCats = [
         name: "Diva",
         age: 8,
         sex: "Female",
-        picture: "https://pbs.twimg.com/media/EXsx72eWoAUFGv6?format=jpg&name=large"
+        picture: "https://pbs.twimg.com/media/EXsx72eWoAUFGv6?format=jpg&name=large",
+        likes: 0
     }
   ]
   

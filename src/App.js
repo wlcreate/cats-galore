@@ -6,7 +6,7 @@ import listOfCats from './listOfCats'
 class App extends Component {
   state = {
     allCats: listOfCats,
-    searchParams: "female"
+    searchParams: "all"
   }
 
   handleSelect = (event) => {

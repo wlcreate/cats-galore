@@ -15,6 +15,7 @@ class CatTile extends Component {
   }
 
   handleLikes = (event) => {
+    event.preventDefault() 
     let newLikes = this.props.cat.likes + 1
     console.log(newLikes)
     this.setState({

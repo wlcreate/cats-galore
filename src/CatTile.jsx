@@ -37,7 +37,7 @@ class CatTile extends Component {
   }
 
   render() {
-    let { name, age, sex, picture, ["favorite toy"]: toy, likes } = this.props.cat
+    let { name, age, sex, picture, ["favorite toy"]: toy } = this.props.cat
 
       return(
         <div className="cat-tile">

@@ -6,7 +6,7 @@
       "age": 5,
       "sex": "Male",
       "picture": "https://pbs.twimg.com/media/EXc1EEqWkAYOCAV?format=jpg&name=medium",
-      "likes": 8,
+      "likes": 7,
       "favorite toy": "Random pieces of string"
     },
     {
@@ -17,6 +17,14 @@
       "picture": "https://pbs.twimg.com/media/EXsx72eWoAUFGv6?format=jpg&name=large",
       "likes": 1,
       "favorite toy": "Brand new couch"
+    },
+    {
+      "name": "Felix",
+      "age": "200",
+      "sex": "Male",
+      "toy": "Red ball",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Felix_the_cat.svg/1200px-Felix_the_cat.svg.png",
+      "id": 3
     }
   ]
 }

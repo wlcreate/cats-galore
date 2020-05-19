@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import CatsContainer from './CatsContainer.jsx'
 import SelectCat from './SelectCat.jsx'
+import Form from './Form.jsx'
 
 class App extends Component {
   state = {
@@ -16,7 +17,6 @@ class App extends Component {
       this.setState({
         cats: newArr
       })
-      console.log(newArr)
     })
   }
 
@@ -42,6 +42,7 @@ class App extends Component {
     return (
       <>
         <h1>Cats!</h1>
+        <Form />
         <SelectCat searchTerm = {this.state.searchTerm} changeSearchTerm = { this.changeSearchTerm } />
         <CatsContainer cats = { this.pickCats() }/>
       </>

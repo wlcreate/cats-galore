@@ -38,11 +38,17 @@ class App extends Component {
     return newArr
   }
 
+  addNewCat = (cat) => {
+    this.setState({
+      cats: [...this.state.cats, cat]
+    })
+  }
+
   render() {
     return (
       <>
         <h1>Cats!</h1>
-        <Form />
+        <Form addNewCat = { this.addNewCat } cats = { this.pickCats() }/>
         <SelectCat searchTerm = {this.state.searchTerm} changeSearchTerm = { this.changeSearchTerm } />
         <CatsContainer cats = { this.pickCats() }/>
       </>

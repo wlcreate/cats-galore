@@ -36,7 +36,9 @@ class Form extends Component {
       })
     })
     .then(r => r.json())
-    .then(console.log)
+    .then((newCat) => {
+      this.props.addNewCat(newCat)
+    })
   }
 
   render() {

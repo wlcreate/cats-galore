@@ -2,15 +2,16 @@
 
 ### Basic functionalities
 * Display an index of cats
-* Each cat object should display a picture, name, age, and sex
+* Each cat should display a picture and a name
+* Click on a cat's picture to show more info
+* Filter cats through a select dropdown
+* Search for cats by name
 
-### Extra functionalities
-* Click on a cat's picture to show more info, like a bio and where it's from
-
-### CRUD stretch goals
-* Allow user to comment on each cat
-* Allow user to create new cat instances
+### CRUD operations
+* Like button for each cat that increases the cat's likes with each click
+* Create new cats through a form
+* Delete cats
 
 ### Component tree
-App --> CatsContainer --> CatTile --> Comments
-                                  --> Likes
+App --> CatsContainer --> CatTile --> Comments, Likes
+    --> SelectCat

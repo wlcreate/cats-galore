@@ -6,7 +6,7 @@
       "age": 5,
       "sex": "Male",
       "picture": "https://pbs.twimg.com/media/EXc1EEqWkAYOCAV?format=jpg&name=medium",
-      "likes": 5,
+      "likes": 8,
       "favorite toy": "Random pieces of string"
     },
     {
@@ -15,7 +15,7 @@
       "age": 8,
       "sex": "Female",
       "picture": "https://pbs.twimg.com/media/EXsx72eWoAUFGv6?format=jpg&name=large",
-      "likes": 5,
+      "likes": 1,
       "favorite toy": "Brand new couch"
     }
   ]

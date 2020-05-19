@@ -13,9 +13,10 @@ class CatTile extends Component {
   }
 
   handleLikes = (event) => {
-    event.preventDefault()
-
-    let newLikes = this.props.cat.likes + 1
+    let newLikes = this.state.likes + 1
+    this.setState({
+      likes: newLikes
+    })
 
     fetch(`http://localhost:3000/cats/${this.props.cat.id}`, {
       method: "PATCH",
@@ -28,17 +29,21 @@ class CatTile extends Component {
       })
     })
     .then(r => r.json())
-    .then(console.log)
+    .then((updatedCat) => {
+      this.setState({
+        likes: updatedCat.likes
+      })
+    })
   }
 
   render() {
-    let { name, age, sex, picture, likes, ["favorite toy"]: toy } = this.props.cat
+    let { name, age, sex, picture, ["favorite toy"]: toy, likes } = this.props.cat
 
       return(
         <div className="cat-tile">
           <img alt={ `${name} cat` } src={ picture } onClick = { this.toggleTile } />
           <h3>{ name }</h3>
-          <button onClick={ this.handleLikes }>Likes: { likes } </button>
+          <button onClick={ this.handleLikes }>Likes: { this.state.likes } </button>
 
           { this.state.showDetails ?
           <>

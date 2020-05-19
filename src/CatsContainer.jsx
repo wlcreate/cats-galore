@@ -2,18 +2,18 @@ import React from 'react'
 import CatTile from './CatTile.jsx'
 
 let CatsContainer = (props) => {
-  let arrOfCats = props.cats.map((singleCat) => {
-    console.log(singleCat)
+  let catsArr = props.cats.map((cat) => {
+    console.log(cat)
     
     return <CatTile 
-      cat = { singleCat }
-      key = { singleCat.id }
+      cat = { cat }
+      key = { cat.id }
     />
   })
 
   return(
     <div className="cat-container">
-      { arrOfCats }
+      { catsArr }
     </div>
   )
 }

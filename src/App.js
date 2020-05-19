@@ -1,49 +1,49 @@
 import React, { Component } from 'react';
 import './App.css';
 import CatsContainer from './CatsContainer.jsx'
-import listOfCats from './listOfCats'
+import SelectCat from './SelectCat.jsx'
 
 class App extends Component {
   state = {
-    allCats: listOfCats,
-    searchParams: "all"
+    cats: [],
+    searchTerm: "All"
   }
 
-  handleSelect = (event) => {
-    console.log(event.target)
+  componentDidMount() {
+    fetch("http://localhost:3000/cats")
+    .then(r => r.json())
+    .then((newArr) => {
+      this.setState({
+        cats: newArr
+      })
+      console.log(newArr)
+    })
+  }
 
+  changeSearchTerm = (term) => {
     this.setState({
-      searchParams: event.target.value
-    }) 
+      searchTerm: term
+    })
   }
 
   pickCats = () => {
-    let { allCats, searchParams } = this.state
-    let newCats = allCats
+    let { cats, searchTerm } = this.state 
+    let newArr = cats 
 
-    if (searchParams === "male") {
-      let copyCats = [...allCats]
-      newCats = copyCats.filter(cat => cat.sex === "Male")
-    } else if (searchParams === "female") {
-      let copyCats = [...allCats]
-      newCats = copyCats.filter(cat => cat.sex === "Female")
+    if (searchTerm === "All") {
+      newArr = cats
     } else {
-      return newCats
+      newArr = cats.filter((cat) => cat.sex === searchTerm)
     }
-    return newCats
+    return newArr
   }
 
   render() {
     return (
       <>
-      <select value={this.state.searchParams} onChange={this.handleSelect}>
-      <option value="all">All cats</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-      </select>
-
-      <h1>Cats!</h1>
-      <CatsContainer cats={this.pickCats()}/>
+        <h1>Cats!</h1>
+        <SelectCat searchTerm = {this.state.searchTerm} changeSearchTerm = { this.changeSearchTerm } />
+        <CatsContainer cats = { this.pickCats() }/>
       </>
     )
   }

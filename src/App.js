@@ -3,11 +3,13 @@ import './App.css';
 import CatsContainer from './CatsContainer.jsx'
 import SelectCat from './SelectCat.jsx'
 import Form from './Form.jsx'
+import FilterCats from './FilterCats.jsx'
 
 class App extends Component {
   state = {
     cats: [],
-    searchTerm: "All"
+    searchTerm: "All",
+    filterTerm: ""
   }
 
   componentDidMount() {
@@ -23,6 +25,12 @@ class App extends Component {
   changeSearchTerm = (term) => {
     this.setState({
       searchTerm: term
+    })
+  }
+
+  changeFilterTerm = (term) => {
+    this.setState({
+      filterTerm: term
     })
   }
 
@@ -47,10 +55,11 @@ class App extends Component {
   render() {
     return (
       <>
-        <h1>Cats!</h1>
-        <Form addNewCat = { this.addNewCat } cats = { this.pickCats() }/>
+        <h1>Cats galore!</h1>
         <SelectCat searchTerm = {this.state.searchTerm} changeSearchTerm = { this.changeSearchTerm } />
+        <FilterCats filterTerm = {this.state.filterTerm} changeFilterTerm = { this.changeFilterTerm }/>
         <CatsContainer cats = { this.pickCats() }/>
+        <Form addNewCat = { this.addNewCat } cats = { this.pickCats() }/>
       </>
     )
   }

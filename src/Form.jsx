@@ -9,7 +9,8 @@ class Form extends Component {
       age: '',
       sex: '',
       ["favorite toy"]: '',
-      picture: ''
+      picture: '',
+      likes: 0
     }
   }
 
@@ -46,7 +47,10 @@ class Form extends Component {
 
     return (
       <div>
+        
         <form onSubmit={this.handleSubmit}>
+          <h3>Add a new cat</h3>
+
           <label>Name</label>
           <input type="text" name="name" value={ name } onChange={ this.handleChange } />
 

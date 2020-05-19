@@ -10,10 +10,6 @@ h1 {
   font-weight: 700;
 }
 
-h1, h2, h3, h4, p {
-  margin: 4px
-}
-
 img {
   width: 300px;
   height: 300px;
@@ -32,12 +28,7 @@ button {
   padding: 12px;
   border-radius: 6px;
   display: block;
-  margin: 10px;
-}
-
-div.cat-tile {
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin: 10px 0px;
 }
 
 select {
@@ -49,5 +40,45 @@ select {
   color: rgb(140, 73, 15);
   padding: 12px;
   border-radius: 6px;
-  margin: 10px;
+  margin: 10px 0px;
+}
+
+input[type=text] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: rgb(140, 73, 15);
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  display: block;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+
+form {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 50px
+}
+
+div.cat-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+div.cat-tile {
+  margin: 10px
 }

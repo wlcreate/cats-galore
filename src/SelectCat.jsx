@@ -7,13 +7,13 @@ class SelectCat extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <select value={this.props.searchTerm} onChange={this.handleSelect}>
           <option value="All">All cats</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
         </select>
-      </div>
+      </>
     )
   }
 }

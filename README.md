@@ -8,7 +8,6 @@
 * Search for cats by name
 
 ### CRUD operations
-* Like button for each cat that increases the cat's likes with each click
 * Create new cats through a form
 * Delete cats
 

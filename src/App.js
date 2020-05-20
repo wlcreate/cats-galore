@@ -8,8 +8,7 @@ import FilterCats from './FilterCats.jsx'
 class App extends Component {
   state = {
     cats: [],
-    searchTerm: "All",
-    filterTerm: ""
+    searchTerm: "All"
   }
 
   componentDidMount() {
@@ -25,12 +24,6 @@ class App extends Component {
   changeSearchTerm = (term) => {
     this.setState({
       searchTerm: term
-    })
-  }
-
-  changeFilterTerm = (term) => {
-    this.setState({
-      filterTerm: term
     })
   }
 
@@ -53,11 +46,13 @@ class App extends Component {
   }
 
   render() {
+    
+
     return (
       <>
         <h1>Cats galore!</h1>
         <SelectCat searchTerm = {this.state.searchTerm} changeSearchTerm = { this.changeSearchTerm } />
-        <FilterCats filterTerm = {this.state.filterTerm} changeFilterTerm = { this.changeFilterTerm }/>
+        <FilterCats cats = {this.state.cats}/>
         <CatsContainer cats = { this.pickCats() }/>
         <Form addNewCat = { this.addNewCat } cats = { this.pickCats() }/>
       </>

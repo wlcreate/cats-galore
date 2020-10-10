@@ -27,16 +27,20 @@ npm start
 <a name="crud"/>
 
 ### CRUD operations
-* READ: See all the cats on the page
-* Create a new cat through the form (CREATE)
-* Increase a cat's likes (UPDATE)
-* Send a cat to your parents' house (DELETE)
+READ: See all the cats on the page
+* Make a GET fetch request to `http://localhost:3000/cats`
+
+CREATE: a new cat through the form
+* Make a POST fetch request to `http://localhost:3000/cats`
+
+UPDATE: Increase a cat's likes
+* Make a PATCH fetch request to `http://localhost:3000/cats/id`
 
 <a name="deliverables"/>
 
 ### Deliverables
-* Display all the cats as a CatTile component
-* Each cat should display their picture, name, number of likes, a like button, and a learn more button
-* Clicking on a learn more button for a cat will remove the cat's likes and like button, and instead show a string that says something like, "Kenny's favorite toy is a baby dog and they are a 8-year old female cat."
-* Search for a cat by name on the home page
+* Display all the cats in the CatsContainer as a CatTile component
+* Each CatTile should display the cat's picture, name, number of likes, a "like" button, and a "learn more" button
+* Clicking on the "learn more" button for a cat will show a string that says something like, "Kenny's favorite toy is a baby dog and they are a 8-year old female cat."
+* On the home page, dynamically search for a cat by its name
 * Add a new cat by filling out the form

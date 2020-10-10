@@ -4,6 +4,7 @@
 * [CRUD operations](#crud)
 * [Deliverables](#deliverables)
 * [Hints](#hints)
+* [What your app should look like](#preview)
 
 <a name="getting-started"/>
 
@@ -76,3 +77,8 @@ For example:
 ```
 
 4. What kind of event listener do you need to add to a cat's "learn more" button to toggle their information? And where can you save the `state` for this toggle?
+
+<a name="preview"/>
+
+## What your app should look like
+![screenshot of home page](https://imgur.com/42Rvsqo.png)

@@ -5,6 +5,14 @@ class CatTile extends Component {
     // add attributes here
   }
 
+  toggleTile = () => {
+    // update the state for toggling the cat's information
+  }
+
+  handleLikes = () => {
+    // write a PATCH fetch request for increasing a cat's likes
+  }
+
   render() {
       return(
         <div className="cat-tile">

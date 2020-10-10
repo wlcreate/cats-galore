@@ -1,6 +1,11 @@
 import React from 'react'
 
 const Search = (props) => {
+
+  let handleChange = () => {
+    // write logic for updating the search term in the App component's state
+  }
+
   return(
     <>
       <form>

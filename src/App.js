@@ -13,6 +13,22 @@ class App extends Component {
     // write a GET fetch request here to get all the cats
   }
 
+  changeSearchTerm = () => {
+    // write logic for updating the search term
+  }
+
+  pickCats = () => {
+    // write logic for filtering the cats array, depending on the search term 
+  }
+
+  addNewCat = () => {
+    // write logic for adding a new cat to the backend
+  }
+
+  updateCat = () => {
+    // write logic for updating an existing cat to the backend
+  }
+
   render() {
     return (
       <>

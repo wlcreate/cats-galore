@@ -5,6 +5,14 @@ class Form extends Component {
     // add attributes here
   }
 
+  handleChange = () => {
+    // write logic for updating the state with the user's input
+  }
+
+  handleSubmit = (event) => {
+    // write a POST fetch request for creating a new cat
+  }
+
   render() {
     return (
       <div>

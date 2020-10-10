@@ -42,7 +42,7 @@ UPDATE: Increase a cat's likes
 ### Deliverables
 * Display all the cats in the CatsContainer as a CatTile component
 * Each CatTile should display the cat's picture, name, number of likes, a "like" button, and a "learn more" button
-* Clicking on the "learn more" button for a cat will show a string that says something like, "Kenny's favorite toy is a baby dog and they are a 8-year old female cat." Clicking on it again will hide this information.
+* Clicking on the "learn more" button for a cat will disply more of the cat's information below the button. The information should be something like this: "Kenny's favorite toy is a baby dog and they are a 8-year old female cat." Clicking on the "learn more" button again will hide this information.
 * Add a new cat by filling out the form
 * On the home page, dynamically search for a cat by its name
 
@@ -66,7 +66,7 @@ UPDATE: Increase a cat's likes
 this.state["this is a string"]
  ```
 
-2. Before you tackle the search functionality, think about what information you need to send up and down as props.
+2. Before you tackle the search functionality, think about what information you need to send up and down as props. Where are you going to save the user's input from the search bar? And what kind of logic do you need to write to filter all the cats? 
 
 3. For displaying the cat's information, use string interpolation to combine the cat's different attributes.
 * For example:

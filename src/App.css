@@ -82,5 +82,7 @@ div.cat-container {
 }
 
 div.cat-tile {
-  margin: 10px
+  background-color: white;
+  padding: 0.4em;
+  border-radius: 10px;
 }

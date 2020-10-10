@@ -4,25 +4,25 @@
       "id": 1,
       "name": "Finkie",
       "age": 5,
-      "sex": "Male",
+      "sex": "male",
       "picture": "https://pbs.twimg.com/media/EXc1EEqWkAYOCAV?format=jpg&name=medium",
       "likes": 8,
-      "favorite toy": "Random pieces of string"
+      "favorite toy": "random piece of string"
     },
     {
       "id": 2,
       "name": "Kenny",
       "age": 8,
-      "sex": "Female",
+      "sex": "female",
       "picture": "https://www.incimages.com/uploaded_files/image/1920x1080/getty_513189787_110007.jpg",
       "likes": 1,
-      "favorite toy": "Her own paws"
+      "favorite toy": "her own paw"
     },
     {
       "name": "Felix",
       "age": "200",
-      "sex": "Male",
-      "toy": "Red ball",
+      "sex": "male",
+      "favorite toy": "red ball",
       "picture": "https://www.pets4homes.co.uk/images/classifieds/2016/03/21/1231092/large/lovely-blackwhite-felix-look-alike-girl-kitten-5791f88c64f33.JPG",
       "id": 3,
       "likes": 1
@@ -30,8 +30,8 @@
     {
       "name": "Bone Bone",
       "age": "87",
-      "sex": "Female",
-      "toy": "Backpack",
+      "sex": "female",
+      "favorite toy": "backpack",
       "picture": "https://static.boredpanda.com/blog/wp-content/uploads/2017/03/fluffy-cat-bone-bone-thai-31-58de01514c876__700.jpg",
       "id": 4,
       "likes": 6
@@ -39,8 +39,8 @@
     {
       "name": "Biscuit",
       "age": "2",
-      "sex": "Female",
-      "toy": "Human hands",
+      "sex": "female",
+      "favorite toy": "human hand",
       "picture": "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
       "id": 5,
       "likes": 0
@@ -48,8 +48,8 @@
     {
       "name": "Burrito Dude",
       "age": "129",
-      "sex": "Male",
-      "toy": "Tinfoil wrappers",
+      "sex": "male",
+      "favorite toy": "tinfoil wrapper",
       "picture": "https://static.india.com/wp-content/uploads/2015/11/089.jpg?impolicy=Medium_Resize&w=1200&h=800",
       "id": 6,
       "likes": 0

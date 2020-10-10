@@ -32,20 +32,20 @@ class CatTile extends Component {
     let { name, age, sex, picture, ["favorite toy"]: toy, likes } = this.props.cat
 
       return(
-        <div className="cat-tile">
-          <img alt={ `${name} cat` } src={ picture } onClick = { this.toggleTile } />
-          <h3>{ name }</h3>
-          <p>{likes} likes</p>
-          <button onClick={this.handleLikes}> 🤍 Like</button>
+        <div className="cat-tile" onClick = {this.toggleTile}>
+          <img alt={`${name} cat`} src={picture}/>
 
           { this.state.showDetails ?
-          <>
-            <p>Age: { age }</p>
-            <p>Sex: { sex }</p>
-            <p>Favorite toy: { toy }</p>
-            <p>{ likes } likes</p>
-          </>
-          : null }
+            <>
+              <p>{name}'s favorite toy is a {toy} and they are a {age}-year old {sex} cat.</p>
+            </>
+            :
+            <>
+              <h3>{ name }</h3>
+              <p>{likes} likes</p>
+              <button onClick={this.handleLikes}> 🤍 Like</button>
+            </>
+          }
         </div>    
     )
   }

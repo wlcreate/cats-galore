@@ -15,7 +15,7 @@
       "age": 8,
       "sex": "female",
       "picture": "https://www.incimages.com/uploaded_files/image/1920x1080/getty_513189787_110007.jpg",
-      "likes": 18,
+      "likes": 28,
       "favorite toy": "baby dog"
     },
     {
@@ -53,6 +53,24 @@
       "picture": "https://static.india.com/wp-content/uploads/2015/11/089.jpg?impolicy=Medium_Resize&w=1200&h=800",
       "id": 6,
       "likes": 5
+    },
+    {
+      "name": "Custard",
+      "age": "3",
+      "sex": "male",
+      "favorite toy": "peanut butter jar",
+      "picture": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/49410438/3/?bust=1602347258&width=1080",
+      "likes": 6,
+      "id": 7
+    },
+    {
+      "name": "Pup",
+      "age": "10",
+      "sex": "female",
+      "favorite toy": "catnip",
+      "picture": "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg",
+      "likes": 7,
+      "id": 8
     }
   ]
 }

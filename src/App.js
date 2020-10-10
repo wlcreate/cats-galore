@@ -35,7 +35,7 @@ class App extends Component {
       return newCatsArray
     } else {
       return newCatsArray = cats.filter((cat) => {
-        return cat.name.includes(searchTerm)
+        return cat.name.toLowerCase().includes(searchTerm.toLowerCase())
       })
     }
   }

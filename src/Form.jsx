@@ -9,8 +9,7 @@ class Form extends Component {
       age: '',
       sex: '',
       ["favorite toy"]: '',
-      picture: '',
-      likes: 0
+      picture: ''
     }
   }
 
@@ -25,7 +24,6 @@ class Form extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    let { name, age, sex, ["favorite toy"]: toy, picture } = this.state 
 
     fetch("http://localhost:3000/cats", {
       method: "POST",
@@ -33,7 +31,12 @@ class Form extends Component {
         "Content-Type": 'application/json'
       }, 
       body: JSON.stringify({
-        name, age, sex, toy, picture
+        name: this.state.name,
+        age: this.state.age,
+        sex: this.state.sex,
+        ["favorite toy"]: this.state["favorite toy"],
+        picture: this.state.picture,
+        likes: 0
       })
     })
     .then(r => r.json())

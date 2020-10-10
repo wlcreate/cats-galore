@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class Filter extends Component {
   handleSelect = (event) => {
-    this.props.changeFilterTerm(event.target.value)
+    this.props.changeSelectedSex(event.target.value)
   }
 
   render() {

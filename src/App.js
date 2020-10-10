@@ -35,15 +35,22 @@ class App extends Component {
   }
 
   pickCats = () => {
-    let {cats, selectedSex} = this.state 
-    let newArr = cats 
+    let {cats, selectedSex, searchTerm} = this.state
+    let newCatsArray = [...cats]
 
-    if (selectedSex === "all") {
-      newArr = cats
+    // if (selectedSex === "all") {
+    //   return newCatsArray
+    // } else {
+    //   return newCatsArray = cats.filter((cat) => cat.sex === selectedSex)
+    // }
+    
+    if (searchTerm === "") {
+      return newCatsArray
     } else {
-      newArr = cats.filter((cat) => cat.sex === selectedSex)
+      return newCatsArray = cats.filter((cat) => {
+        return cat.name.includes(searchTerm)
+      })
     }
-    return newArr
   }
 
   addNewCat = (newCat) => {
@@ -67,14 +74,13 @@ class App extends Component {
   }
 
   render() {
-
     return (
       <>
         <h1>Cats galore!</h1>
         <Filter selectedSex={this.state.selectedSex} changeSelectedSex={this.changeSelectedSex} />
         <Search changeSearchTerm={this.changeSearchTerm} searchTerm={this.state.searchTerm}/>
         <CatsContainer cats = {this.pickCats()} updateCat={this.updateCat}/>
-        <Form addNewCat = { this.addNewCat } cats = { this.pickCats() }/>
+        <Form addNewCat = {this.addNewCat} cats = {this.pickCats()}/>
       </>
     )
   }

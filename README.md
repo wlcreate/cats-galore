@@ -1,16 +1,16 @@
 # Cats Galore
 
 ### Basic functionalities
-* Display an index of cats
-* Each cat should display a picture and a name
-* Click on a cat's picture to show more info
-* Filter cats through a select dropdown
-* Filter for cats by name
+* Display all the cats as a CatTile component
+* Each cat should display their picture, name, number of likes, a like button, and a learn more button
+* Clicking on a learn more button for a cat will remove the cat's likes and like button, and instead show a string that says something like, "Kenny's favorite toy is a baby dog and they are a 8-year old female cat."
+* Search for a cat by name on the home page
+* Add a new cat by filling out the form
 
 ### CRUD operations
-* Create new cats through a form
-* Delete cats
+* See all the cats on the page (READ)
+* Create a new cat through the form (CREATE)
+* Increase a cat's likes (UPDATE)
+* Send a cat to your parents' house (DELETE)
 
-### Component tree
-App --> CatsContainer --> CatTile --> Comments, Likes
-    --> Filter
+### Deliverables

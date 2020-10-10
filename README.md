@@ -3,6 +3,7 @@
 * [Getting started](#getting-started)
 * [CRUD operations](#crud)
 * [Deliverables](#deliverables)
+* [Hints](#hints)
 
 <a name="getting-started"/>
 
@@ -41,6 +42,37 @@ UPDATE: Increase a cat's likes
 ### Deliverables
 * Display all the cats in the CatsContainer as a CatTile component
 * Each CatTile should display the cat's picture, name, number of likes, a "like" button, and a "learn more" button
-* Clicking on the "learn more" button for a cat will show a string that says something like, "Kenny's favorite toy is a baby dog and they are a 8-year old female cat."
-* On the home page, dynamically search for a cat by its name
+* Clicking on the "learn more" button for a cat will show a string that says something like, "Kenny's favorite toy is a baby dog and they are a 8-year old female cat." Clicking on it again will hide this information.
 * Add a new cat by filling out the form
+* On the home page, dynamically search for a cat by its name
+
+<a name="hints"/>
+
+### Hints
+1. If you see a key in a JSON object that has whitespaces, reassign the key to something more workable
+* For example:
+
+```javascript
+{
+  "id": 1,
+  "likes": 22,
+  "this is a string": "hello, world!",
+}
+
+// reassign the key
+["this is a string"]: string
+
+// or use bracket notation without reassigning it
+this.state["this is a string"]
+ ```
+
+2. Before you tackle the search functionality, think about what information you need to send up and down as props.
+
+3. For displaying the cat's information, use string interpolation to combine the cat's different attributes.
+* For example:
+
+```javascript
+<p>{name}'s favorite toy is a {toy} and they are a {age}-year old {sex} cat.</p>
+```
+
+4. What kind of event listener do you need to add to a cat's "learn more" button to toggle their information? And where can you save the `state` for this toggle?

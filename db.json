@@ -43,7 +43,7 @@
       "favorite toy": "human hand",
       "picture": "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
       "id": 5,
-      "likes": 0
+      "likes": 9
     },
     {
       "name": "Burrito Dude",
@@ -52,7 +52,7 @@
       "favorite toy": "tinfoil wrapper",
       "picture": "https://static.india.com/wp-content/uploads/2015/11/089.jpg?impolicy=Medium_Resize&w=1200&h=800",
       "id": 6,
-      "likes": 0
+      "likes": 5
     }
   ]
 }

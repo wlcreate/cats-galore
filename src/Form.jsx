@@ -52,19 +52,19 @@ class Form extends Component {
           <h3>Add a new cat</h3>
 
           <label>Name</label>
-          <input type="text" name="name" value={ name } onChange={ this.handleChange } />
+          <input type="text" name="name" value={ name } onChange={ this.handleChange } autoComplete="off"/>
 
           <label>Age</label>
-          <input type="text" name="age" value={ age } onChange={ this.handleChange } />
+          <input type="text" name="age" value={ age } onChange={ this.handleChange } autoComplete="off" />
 
           <label>Sex</label>
-          <input type="text" name="sex" value={ sex } onChange={ this.handleChange } />
+          <input type="text" name="sex" value={ sex } onChange={ this.handleChange } autoComplete="off" />
 
-          <label>Picture</label>
-          <input type="text" name="picture" value={ picture } onChange={ this.handleChange } />
+          <label>Image link</label>
+          <input type="text" name="picture" value={ picture } onChange={ this.handleChange } autoComplete="off" />
 
           <label>Favorite toy</label>
-          <input type="text" name="favorite toy" value={ toy } onChange={ this.handleChange } />
+          <input type="text" name="favorite toy" value={ toy } onChange={ this.handleChange } autoComplete="off" />
           
         <input type="submit" value="Submit" />
       </form>

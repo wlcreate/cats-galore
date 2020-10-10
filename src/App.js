@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import CatsContainer from './CatsContainer.jsx'
-import Filter from './Filter.jsx'
+// import Filter from './Filter.jsx'
 import Form from './Form.jsx'
 import Search from './Search.jsx'
 

@@ -3,7 +3,6 @@ import CatTile from './CatTile.jsx'
 
 let CatsContainer = (props) => {
   let catsArr = props.cats.map((cat) => {
-    console.log(cat)
     
     return <CatTile 
       cat = { cat }

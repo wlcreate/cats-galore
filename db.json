@@ -11,12 +11,12 @@
     },
     {
       "id": 2,
-      "name": "Diva",
+      "name": "Kenny",
       "age": 8,
       "sex": "Female",
-      "picture": "https://pbs.twimg.com/media/EXsx72eWoAUFGv6?format=jpg&name=large",
+      "picture": "https://www.incimages.com/uploaded_files/image/1920x1080/getty_513189787_110007.jpg",
       "likes": 1,
-      "favorite toy": "Brand new couch"
+      "favorite toy": "Her own paws"
     },
     {
       "name": "Felix",
@@ -42,6 +42,15 @@
       "toy": "Human hands",
       "picture": "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
       "id": 5,
+      "likes": 0
+    },
+    {
+      "name": "Burrito Dude",
+      "age": "129",
+      "sex": "Male",
+      "toy": "Tinfoil wrappers",
+      "picture": "https://static.india.com/wp-content/uploads/2015/11/089.jpg?impolicy=Medium_Resize&w=1200&h=800",
+      "id": 6,
       "likes": 0
     }
   ]

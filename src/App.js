@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 import CatsContainer from './CatsContainer.jsx'
 import SelectCat from './SelectCat.jsx'
 import Form from './Form.jsx'
@@ -46,8 +46,6 @@ class App extends Component {
   }
 
   render() {
-    
-
     return (
       <>
         <h1>Cats galore!</h1>

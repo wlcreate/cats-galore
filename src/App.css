@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 5em;
   font-weight: 700;
 }
 
@@ -75,8 +75,10 @@ form {
 }
 
 div.cat-container {
-  display: flex;
-  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 0fr);
+  grid-gap: 1em;
+  margin-top: 3em;
 }
 
 div.cat-tile {

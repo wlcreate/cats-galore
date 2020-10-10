@@ -1,13 +1,9 @@
 import React from 'react'
 import CatTile from './CatTile.jsx'
 
-let CatsContainer = (props) => {
+const CatsContainer = (props) => {
   let catsArr = props.cats.map((cat) => {
-    
-    return <CatTile 
-      cat = { cat }
-      key = { cat.id }
-    />
+    return <CatTile cat = {cat} key = {cat.id} updateCat={props.updateCat}/>
   })
 
   return(

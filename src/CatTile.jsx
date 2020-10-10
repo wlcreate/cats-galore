@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 class CatTile extends Component {
   state = {
     showDetails: false,
-    likes: 0
   }
 
   toggleTile = (event) => {
@@ -13,11 +12,6 @@ class CatTile extends Component {
   }
 
   handleLikes = (event) => {
-    let newLikes = this.state.likes + 1
-    this.setState({
-      likes: newLikes
-    })
-
     fetch(`http://localhost:3000/cats/${this.props.cat.id}`, {
       method: "PATCH",
       headers: {
@@ -25,14 +19,12 @@ class CatTile extends Component {
         Accept: 'application/json'
       },
       body: JSON.stringify({
-        likes: newLikes
+        likes: this.props.cat.likes + 1
       })
     })
     .then(r => r.json())
     .then((updatedCat) => {
-      this.setState({
-        likes: updatedCat.likes
-      })
+      this.props.updateCat(updatedCat)
     })
   }
 
@@ -43,7 +35,8 @@ class CatTile extends Component {
         <div className="cat-tile">
           <img alt={ `${name} cat` } src={ picture } onClick = { this.toggleTile } />
           <h3>{ name }</h3>
-          {/* <button onClick={ this.handleLikes }>Likes: { this.state.likes } </button> */}
+          <p>{likes} likes</p>
+          <button onClick={this.handleLikes}> 🤍 Like</button>
 
           { this.state.showDetails ?
           <>

@@ -14,9 +14,9 @@ class App extends Component {
   componentDidMount() {
     fetch("http://localhost:3000/cats")
     .then(r => r.json())
-    .then((newArr) => {
+    .then((catsArray) => {
       this.setState({
-        cats: newArr
+        cats: catsArray
       })
     })
   }
@@ -45,13 +45,17 @@ class App extends Component {
     })
   }
 
+  updateCat = (cat) => {
+    
+  }
+
   render() {
     return (
       <>
         <h1>Cats galore!</h1>
-        <SelectCat searchTerm = {this.state.searchTerm} changeSearchTerm = { this.changeSearchTerm } />
+        <SelectCat searchTerm = {this.state.searchTerm} changeSearchTerm = {this.changeSearchTerm} />
         <FilterCats cats = {this.state.cats}/>
-        <CatsContainer cats = { this.pickCats() }/>
+        <CatsContainer cats = {this.pickCats()} updateCat={this.updateCat}/>
         <Form addNewCat = { this.addNewCat } cats = { this.pickCats() }/>
       </>
     )

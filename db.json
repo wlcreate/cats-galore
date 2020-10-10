@@ -24,7 +24,8 @@
       "sex": "Male",
       "toy": "Red ball",
       "picture": "https://www.pets4homes.co.uk/images/classifieds/2016/03/21/1231092/large/lovely-blackwhite-felix-look-alike-girl-kitten-5791f88c64f33.JPG",
-      "id": 3
+      "id": 3,
+      "likes": 1
     },
     {
       "name": "Bone Bone",

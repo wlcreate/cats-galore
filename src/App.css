@@ -1,13 +1,17 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Karla", Helvetica, sans-serif;
   font-size: 18px;
   margin: 60px;
-  background-color: rgb(250, 215, 187);
+  background-color: rgb(230, 212, 209);
 }
 
 h1 {
   font-size: 5em;
   font-weight: 700;
+}
+
+h3, p {
+  margin: 4px 0px;
 }
 
 img {
@@ -18,7 +22,7 @@ img {
   margin-bottom: 10px;
 }
 
-button {
+button, input[type=submit] {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -26,9 +30,8 @@ button {
   border: none;
   color: white;
   padding: 12px;
-  border-radius: 6px;
-  display: block;
-  margin: 10px 0px;
+  border-radius: 4px;
+  margin: 10px 4px;
 }
 
 select {
@@ -51,20 +54,6 @@ input[type=text] {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-}
-
-input[type=submit] {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  background-color: rgb(140, 73, 15);
-  border: none;
-  color: white;
-  padding: 12px;
-  border-radius: 6px;
-  display: block;
-  margin: 10px 0px;
-  cursor: pointer;
 }
 
 form {

@@ -43,7 +43,7 @@ class CatTile extends Component {
             :
             <>
               <p>{likes} likes</p>
-              <button onClick={this.handleLikes}> 🤍 Like</button>
+              <button onClick={this.handleLikes}>Like</button>
             </>
           }
           <button onClick = {this.toggleTile}>Learn more</button>

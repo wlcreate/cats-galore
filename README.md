@@ -9,10 +9,10 @@
 <a name="getting-started"/>
 
 ## Getting started
-* Copy the repo URL and run `git clone` in your terminal. `cd` into the new directory and run these commands.
+* Fork this repo. Copy the new repo URL and run `git clone` in your terminal. `cd` into the new directory and run these commands.
 
 ```
-npm install -g json-server
+npm install
 json-server --watch db.json
 ```
 
@@ -41,11 +41,11 @@ UPDATE: Increase a cat's likes
 <a name="deliverables"/>
 
 ## Deliverables
-* Display all the cats in the CatsContainer as a CatTile component
-* Each CatTile should display the cat's picture, name, number of likes, a "like" button, and a "learn more" button
-* Clicking on the "learn more" button for a cat will disply more of the cat's information below the button. The information should be something like this: "Kenny's favorite toy is a baby dog and they are a 8-year old female cat." Clicking on the "learn more" button again will hide this information.
-* Add a new cat by filling out the form
-* On the home page, dynamically search for a cat by its name
+* Display all the cats in the CatsContainer as a CatTile component.
+* Each CatTile should display the cat's picture, name, number of likes, a "like" button, and a "learn more" button.
+* Clicking on the "learn more" button for a cat will display more of the cat's information below the button. The information should be something like this: "Kenny's favorite toy is a baby dog and they are a 8-year old female cat." Clicking on the "learn more" button again will hide this information.
+* Add a new cat by filling out the form.
+* On the home page, dynamically search for a cat by its name.
 
 <a name="hints"/>
 

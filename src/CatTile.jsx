@@ -16,7 +16,6 @@ class CatTile extends Component {
       method: "PATCH",
       headers: {
         'Content-Type': 'application/json',
-        Accept: 'application/json'
       },
       body: JSON.stringify({
         likes: this.props.cat.likes + 1
@@ -32,20 +31,22 @@ class CatTile extends Component {
     let { name, age, sex, picture, ["favorite toy"]: toy, likes } = this.props.cat
 
       return(
-        <div className="cat-tile" onClick = {this.toggleTile}>
+        <div className="cat-tile">
+          
           <img alt={`${name} cat`} src={picture}/>
-
+          <h3>{ name }</h3>
+          
           { this.state.showDetails ?
             <>
               <p>{name}'s favorite toy is a {toy} and they are a {age}-year old {sex} cat.</p>
             </>
             :
             <>
-              <h3>{ name }</h3>
               <p>{likes} likes</p>
               <button onClick={this.handleLikes}> 🤍 Like</button>
             </>
           }
+          <button onClick = {this.toggleTile}>Learn more</button>
         </div>    
     )
   }

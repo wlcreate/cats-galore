@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import './App.css'
 import CatsContainer from './CatsContainer.jsx'
-import SelectCat from './SelectCat.jsx'
+import Filter from './Filter.jsx'
 import Form from './Form.jsx'
-import FilterCats from './FilterCats.jsx'
+import Search from './Search.jsx'
 
 class App extends Component {
   state = {
     cats: [],
-    searchTerm: "All"
+    selectedSex: "all",
+    searchTerm: ""
   }
 
   componentDidMount() {
@@ -21,6 +22,12 @@ class App extends Component {
     })
   }
 
+  changeSelectedSex = (term) => {
+    this.setState({
+      selectedSex: term
+    })
+  }
+
   changeSearchTerm = (term) => {
     this.setState({
       searchTerm: term
@@ -28,33 +35,44 @@ class App extends Component {
   }
 
   pickCats = () => {
-    let { cats, searchTerm } = this.state 
+    let {cats, selectedSex} = this.state 
     let newArr = cats 
 
-    if (searchTerm === "All") {
+    if (selectedSex === "all") {
       newArr = cats
     } else {
-      newArr = cats.filter((cat) => cat.sex === searchTerm)
+      newArr = cats.filter((cat) => cat.sex === selectedSex)
     }
     return newArr
   }
 
-  addNewCat = (cat) => {
+  addNewCat = (newCat) => {
     this.setState({
-      cats: [...this.state.cats, cat]
+      cats: [...this.state.cats, newCat]
     })
   }
 
-  updateCat = (cat) => {
-    
+  updateCat = (updatedCat) => {
+    let newCatsArray = this.state.cats.map((cat) => {
+      if (cat.id === updatedCat.id) {
+        return updatedCat
+      } else {
+        return cat
+      }
+    })
+
+    this.setState({
+      cats: newCatsArray
+    })
   }
 
   render() {
+
     return (
       <>
         <h1>Cats galore!</h1>
-        <SelectCat searchTerm = {this.state.searchTerm} changeSearchTerm = {this.changeSearchTerm} />
-        <FilterCats cats = {this.state.cats}/>
+        <Filter selectedSex={this.state.selectedSex} changeSelectedSex={this.changeSelectedSex} />
+        <Search changeSearchTerm={this.changeSearchTerm} searchTerm={this.state.searchTerm}/>
         <CatsContainer cats = {this.pickCats()} updateCat={this.updateCat}/>
         <Form addNewCat = { this.addNewCat } cats = { this.pickCats() }/>
       </>

@@ -15,7 +15,7 @@
       "age": 8,
       "sex": "female",
       "picture": "https://www.incimages.com/uploaded_files/image/1920x1080/getty_513189787_110007.jpg",
-      "likes": 1,
+      "likes": 18,
       "favorite toy": "her own paw"
     },
     {
@@ -25,7 +25,7 @@
       "favorite toy": "red ball",
       "picture": "https://www.pets4homes.co.uk/images/classifieds/2016/03/21/1231092/large/lovely-blackwhite-felix-look-alike-girl-kitten-5791f88c64f33.JPG",
       "id": 3,
-      "likes": 1
+      "likes": 9
     },
     {
       "name": "Bone Bone",

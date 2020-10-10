@@ -8,7 +8,6 @@ import Search from './Search.jsx'
 class App extends Component {
   state = {
     cats: [],
-    selectedSex: "all",
     searchTerm: ""
   }
 
@@ -22,12 +21,6 @@ class App extends Component {
     })
   }
 
-  changeSelectedSex = (term) => {
-    this.setState({
-      selectedSex: term
-    })
-  }
-
   changeSearchTerm = (term) => {
     this.setState({
       searchTerm: term
@@ -35,15 +28,9 @@ class App extends Component {
   }
 
   pickCats = () => {
-    let {cats, selectedSex, searchTerm} = this.state
+    let {cats, searchTerm} = this.state
     let newCatsArray = [...cats]
 
-    // if (selectedSex === "all") {
-    //   return newCatsArray
-    // } else {
-    //   return newCatsArray = cats.filter((cat) => cat.sex === selectedSex)
-    // }
-    
     if (searchTerm === "") {
       return newCatsArray
     } else {
@@ -77,7 +64,6 @@ class App extends Component {
     return (
       <>
         <h1>Cats galore!</h1>
-        <Filter selectedSex={this.state.selectedSex} changeSelectedSex={this.changeSelectedSex} />
         <Search changeSearchTerm={this.changeSearchTerm} searchTerm={this.state.searchTerm}/>
         <CatsContainer cats = {this.pickCats()} updateCat={this.updateCat}/>
         <Form addNewCat = {this.addNewCat} cats = {this.pickCats()}/>

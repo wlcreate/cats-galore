@@ -9,7 +9,7 @@ const Search = (props) => {
   return(
     <>
       <form>
-        <h3>Filter for a cat</h3>
+        <h3>Search for a cat's name</h3>
         <input type="text" value={props.searchTerm} onChange={handleChange} />
       </form>
       </>

@@ -71,6 +71,24 @@
       "picture": "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg",
       "likes": 7,
       "id": 8
+    },
+    {
+      "name": "Hattie",
+      "age": "3",
+      "sex": "female",
+      "picture": "https://i.pinimg.com/736x/33/32/6d/33326dcddbf15c56d631e374b62338dc.jpg",
+      "favorite toy": "cute hats",
+      "id": 9,
+      "likes": 9
+    },
+    {
+      "name": "Simba",
+      "age": "4",
+      "sex": "male",
+      "picture": "https://pbs.twimg.com/profile_images/1151916124474183680/2iZykkYm_400x400.png",
+      "likes": 4,
+      "favorite toy": "lion king merch",
+      "id": 10
     }
   ]
 }
